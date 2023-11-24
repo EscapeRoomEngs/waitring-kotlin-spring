@@ -1,8 +1,8 @@
-package com.waitring.waitring.core.dto
+package com.waitring.waitring.common.dto
 
-import com.waitring.waitring.core.utils.HttpRequestUtils
+import com.waitring.waitring.common.utils.HttpRequestUtils
 import io.swagger.v3.oas.annotations.media.Schema
-import com.waitring.waitring.core.dto.ApiResponse as ApiResponse
+import com.waitring.waitring.common.dto.ApiResponse as ApiResponse
 
 
 @Schema(description = "응답 API")
