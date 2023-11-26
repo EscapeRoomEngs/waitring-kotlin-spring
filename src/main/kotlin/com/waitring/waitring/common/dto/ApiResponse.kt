@@ -4,17 +4,16 @@ import com.waitring.waitring.common.utils.HttpRequestUtils
 import io.swagger.v3.oas.annotations.media.Schema
 import com.waitring.waitring.common.dto.ApiResponse as ApiResponse
 
-
 @Schema(description = "응답 API")
 class ApiResponse<T> (
         @field:Schema(description = "요청 URL")
-        val path: String? = null,
+        val path: String?,
 
         @field:Schema(description = "응답상태")
-        val status: Status? = null,
+        val status: Status?,
 
         @field:Schema(description = "응답결과")
-        val result: Result? = null,
+        val result: Result?,
 
         @field:Schema(description = "응답데이터")
         val output: T? = null
