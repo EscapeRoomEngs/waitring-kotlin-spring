@@ -20,7 +20,7 @@ class StoreCategoryService(private val repository : StoreCategoryRepository) {
      * @return 가게카테고리 리스트
      */
     fun findStoreCtgAll() : FindStoreCtgAllOutput {
-        val storeCtgList = repository.findAll()
+        val storeCtgList = repository.findAllByOrderBySeqAsc()
         return FindStoreCtgAllOutput(mapper.toStoreCtgInfoList(storeCtgList))
     }
 }
