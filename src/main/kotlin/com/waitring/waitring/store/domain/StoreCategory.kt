@@ -1,4 +1,4 @@
-package com.waitring.waitring.store.entity
+package com.waitring.waitring.store.domain
 
 import com.waitring.waitring.common.domain.Base
 import javax.persistence.Column
@@ -9,7 +9,11 @@ import javax.persistence.Id
 
 /** 가게카테고리 */
 @Entity
-class StoreCategory(storeCtgNm : String, seq : Int, useFg : Boolean) : Base() {
+class StoreCategory(
+        storeCtgNm : String,
+        seq : Int,
+        useFg : Boolean
+) : Base() {
 
     /** 가게카테고리 시퀀스번호 */
     @Id

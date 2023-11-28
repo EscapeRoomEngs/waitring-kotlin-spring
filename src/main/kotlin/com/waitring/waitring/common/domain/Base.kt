@@ -29,13 +29,13 @@ abstract class Base {
 
     /** 생성자 */
     @CreatedBy
-    @Column(nullable = false, updatable = false)
+    @Column(nullable = false, updatable = false, length = 20)
     var creater : String? = null
         protected set
 
     /** 수정자 */
     @LastModifiedBy
-    @Column(nullable = false)
+    @Column(nullable = false, length = 20)
     var updater : String? = null
         protected set
 }
