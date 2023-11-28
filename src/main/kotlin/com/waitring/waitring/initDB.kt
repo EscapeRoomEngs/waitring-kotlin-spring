@@ -1,6 +1,6 @@
 package com.waitring.waitring
 
-import com.waitring.waitring.store.entity.StoreCategory
+import com.waitring.waitring.store.domain.StoreCategory
 import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Component
 import javax.annotation.PostConstruct

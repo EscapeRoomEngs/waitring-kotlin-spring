@@ -1,8 +1,7 @@
 package com.waitring.waitring.store.mapper
 
-import com.waitring.waitring.store.dto.FindStoreCtgAllOutput
 import com.waitring.waitring.store.dto.StoreCategoryInfo
-import com.waitring.waitring.store.entity.StoreCategory
+import com.waitring.waitring.store.domain.StoreCategory
 import org.mapstruct.Mapper
 
 @Mapper(componentModel = "spring")
