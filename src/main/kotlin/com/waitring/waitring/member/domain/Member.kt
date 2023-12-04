@@ -78,12 +78,12 @@ class Member(
     var serviceUseDt : LocalDateTime = serviceUseDt
         protected set
 
-    /** 서비스 이용 동의 여부 */
+    /** 알림 수신 동의 여부 */
     @Column(nullable = false)
     var alarmReceiveFg : Boolean = alarmReceiveFg
         protected set
 
-    /** 서비스 이용 동의 일시 */
+    /** 알림 수신 동의 일시 */
     var alarmReceiveDt : LocalDateTime? = alarmReceiveDt
         protected set
 }
