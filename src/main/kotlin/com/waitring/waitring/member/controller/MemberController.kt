@@ -7,10 +7,8 @@ import com.waitring.waitring.member.dto.SignUpInput
 import com.waitring.waitring.member.service.MemberService
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.tags.Tag
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.http.HttpStatus
+import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 
 @Tag(name = "사용자 API")
@@ -25,6 +23,7 @@ class MemberController(private val memberService: MemberService) {
      */
     @Operation(summary = "회원가입")
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     fun signUp(@RequestBody input: @Valid SignUpInput): ApiResponse<Any> {
         memberService.signUp(input)
         return ApiResponse.respSuccessWithNoData(SuccessCode.SIGN_UP_OK)
@@ -37,6 +36,7 @@ class MemberController(private val memberService: MemberService) {
      */
     @Operation(summary = "로그인")
     @PostMapping("/login")
+    @ResponseStatus(HttpStatus.CREATED)
     fun login(@RequestBody input: @Valid LoginInput): ApiResponse<Any> {
         memberService.login(input)
         return ApiResponse.respSuccessWithNoData(SuccessCode.LOGIN_OK)

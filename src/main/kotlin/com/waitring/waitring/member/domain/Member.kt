@@ -38,13 +38,13 @@ class Member(
 
     /** 계정상태 */
     @Enumerated(value = EnumType.STRING)
-    @Column(nullable = false, length = 10)
+    @Column(nullable = false, length = 20)
     var accountSt : AccountState = accountSt
         protected set
 
     /** 권한 */
     @Enumerated(value = EnumType.STRING)
-    @Column(nullable = false, length = 10)
+    @Column(nullable = false, length = 20)
     var authority : Authority = authority
         protected set
 
