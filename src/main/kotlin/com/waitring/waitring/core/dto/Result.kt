@@ -1,4 +1,4 @@
-package com.waitring.waitring.common.dto
+package com.waitring.waitring.core.dto
 
 import io.swagger.v3.oas.annotations.media.Schema
 

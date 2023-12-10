@@ -1,6 +1,6 @@
 package com.waitring.waitring.member.domain
 
-import com.waitring.waitring.common.domain.Base
+import com.waitring.waitring.core.domain.Base
 import java.time.LocalDateTime
 import javax.persistence.*
 

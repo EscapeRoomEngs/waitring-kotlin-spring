@@ -6,5 +6,5 @@ import io.swagger.v3.oas.annotations.media.Schema
 data class FindStoreCtgAllOutput (
 
         @field:Schema(description = "가게카테고리목록")
-        val storeCtgList : List<StoreCategoryInfo>,
+        var storeCtgList : List<StoreCategoryInfo>,
 )
