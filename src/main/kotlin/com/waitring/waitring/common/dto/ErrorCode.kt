@@ -25,6 +25,7 @@ enum class ErrorCode(val status: HttpStatus, val message: String) {
 
     /** 404 NOT_FOUND 잘못된 리소스 접근 */
     NOT_FOUND(HttpStatus.NOT_FOUND, "잘못된 리소스 접근입니다."),
+    STORE_NOT_FOUND(HttpStatus.NOT_FOUND, "해당 가게를 찾을 수 없습니다."),
 
     /** 409 CONFLICT 클라이언트의 요청이 서버의 상태와 충돌 발생 */
 

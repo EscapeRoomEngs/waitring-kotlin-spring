@@ -6,6 +6,7 @@ import javax.persistence.*
 /** 쇼핑센터 */
 @Entity
 class Mall(
+        mallCtg : MallCategory,
         mallNm : String,
         mallSt : MallState,
         region : String,
@@ -20,6 +21,12 @@ class Mall(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var mallId : Long? = null
+
+    /** 쇼핑센터카테고리 시퀀스번호 */
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "mall_ctg_id", nullable = false)
+    var mallCtg : MallCategory = mallCtg
+        protected set
 
     /** 쇼핑센터명 */
     @Column(nullable = false, length = 80)
