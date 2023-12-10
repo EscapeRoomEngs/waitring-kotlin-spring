@@ -1,4 +1,4 @@
-package com.waitring.waitring.common.config
+package com.waitring.waitring.core.config
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition
 import io.swagger.v3.oas.annotations.info.Info

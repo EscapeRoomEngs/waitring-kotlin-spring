@@ -1,5 +1,6 @@
 package com.waitring.waitring
 
+import com.waitring.waitring.common.domain.Image
 import com.waitring.waitring.mall.domain.Mall
 import com.waitring.waitring.mall.domain.MallCategory
 import com.waitring.waitring.mall.domain.MallState
@@ -179,6 +180,27 @@ class InitDB(private val initService: InitService) {
                     waitingTm = 7
             )
             em.persist(store3)
+
+            /**
+             * 이미지 테스트 데이터
+             */
+            val image1 = Image(
+                    store = store1,
+                    imageLink = "https://minfo.lotteshopping.com/content/bnr/202302/0001/20230221153405822_6.jpeg"
+            )
+            em.persist(image1)
+
+            val image2 = Image(
+                    store = store2,
+                    imageLink = "https://minfo.lotteshopping.com/content/bnr/202302/0001/20230221152945692_0.jpeg"
+            )
+            em.persist(image2)
+
+            val image3 = Image(
+                    store = store3,
+                    imageLink = "https://minfo.lotteshopping.com/content/bnr/202302/0001/20230221163208312_0.jpeg"
+            )
+            em.persist(image3)
         }
     }
 }

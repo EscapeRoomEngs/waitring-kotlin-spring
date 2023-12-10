@@ -1,7 +1,7 @@
 package com.waitring.waitring.member.service
 
-import com.waitring.waitring.common.dto.ErrorCode
-import com.waitring.waitring.common.exception.ConflictRuntimeException
+import com.waitring.waitring.core.dto.ErrorCode
+import com.waitring.waitring.core.exception.ConflictRuntimeException
 import com.waitring.waitring.member.domain.AccountState
 import com.waitring.waitring.member.domain.Authority
 import com.waitring.waitring.member.dto.LoginInput

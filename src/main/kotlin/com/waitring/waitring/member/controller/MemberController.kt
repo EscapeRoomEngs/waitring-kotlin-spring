@@ -1,7 +1,7 @@
 package com.waitring.waitring.member.controller
 
-import com.waitring.waitring.common.dto.ApiResponse
-import com.waitring.waitring.common.dto.SuccessCode
+import com.waitring.waitring.core.dto.ApiResponse
+import com.waitring.waitring.core.dto.SuccessCode
 import com.waitring.waitring.member.dto.LoginInput
 import com.waitring.waitring.member.dto.SignUpInput
 import com.waitring.waitring.member.service.MemberService

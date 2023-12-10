@@ -1,4 +1,4 @@
-package com.waitring.waitring.common.domain
+package com.waitring.waitring.core.domain
 
 import org.springframework.data.annotation.CreatedBy
 import org.springframework.data.annotation.CreatedDate

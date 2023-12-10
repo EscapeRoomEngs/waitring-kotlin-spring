@@ -1,9 +1,9 @@
 package com.waitring.waitring.store.controller
 
-import com.waitring.waitring.common.dto.ApiResponse
-import com.waitring.waitring.common.dto.SuccessCode
+import com.waitring.waitring.core.dto.ApiResponse
+import com.waitring.waitring.core.dto.SuccessCode
 import com.waitring.waitring.store.dto.FindStoreDetailOutput
-import com.waitring.waitring.store.service.StoreService
+import com.waitring.waitring.store.service.StoreMainService
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.Parameter
 import io.swagger.v3.oas.annotations.tags.Tag
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController
 @Tag(name = "가게 API")
 @RestController
 @RequestMapping("/store")
-class StoreController(private val storeService : StoreService) {
+class StoreController(private val storeMainService: StoreMainService) {
 
     /**
      * 가게 상세조회
@@ -26,7 +26,7 @@ class StoreController(private val storeService : StoreService) {
     @Parameter(name = "id", description = "가게 시퀀스번호", example = "1")
     @GetMapping("/{id}")
     fun findStoreDetail(@PathVariable id: Long): ApiResponse<FindStoreDetailOutput> {
-        val output = storeService.findStoreDetail(id)
+        val output = storeMainService.findStoreDetail(id)
         return ApiResponse.respSuccess(SuccessCode.FIND_STORE_DETAIL_OK, output)
     }
 }

@@ -1,8 +1,7 @@
-package com.waitring.waitring.common.config
+package com.waitring.waitring.core.config
 
 import javax.persistence.EntityManager
 import com.querydsl.jpa.impl.JPAQueryFactory
-import com.waitring.waitring.logger
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import javax.persistence.PersistenceContext

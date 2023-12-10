@@ -1,4 +1,4 @@
-package com.waitring.waitring.common.dto
+package com.waitring.waitring.core.dto
 
 import org.springframework.http.HttpStatus
 

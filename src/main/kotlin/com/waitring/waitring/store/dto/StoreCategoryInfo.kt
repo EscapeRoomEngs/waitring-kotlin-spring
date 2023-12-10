@@ -6,14 +6,14 @@ import io.swagger.v3.oas.annotations.media.Schema
 data class StoreCategoryInfo (
 
         @field:Schema(description = "가게카테고리 시퀀스번호")
-        val store_id : Long,
+        var store_id : Long,
 
         @field:Schema(description = "가게카테고리명")
-        val storeCtgNm : String,
+        var storeCtgNm : String,
 
         @field:Schema(description = "순번")
-        val seq : Int,
+        var seq : Int,
 
         @field:Schema(description = "사용여부(true : 사용, false : 미사용)")
-        val useFg : Boolean
+        var useFg : Boolean
 )

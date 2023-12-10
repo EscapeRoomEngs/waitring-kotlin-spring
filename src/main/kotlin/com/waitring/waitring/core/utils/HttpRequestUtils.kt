@@ -1,4 +1,4 @@
-package com.waitring.waitring.common.utils
+package com.waitring.waitring.core.utils
 
 import org.springframework.web.context.request.RequestContextHolder
 

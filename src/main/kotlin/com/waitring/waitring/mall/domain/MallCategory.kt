@@ -1,6 +1,6 @@
 package com.waitring.waitring.mall.domain
 
-import com.waitring.waitring.common.domain.Base
+import com.waitring.waitring.core.domain.Base
 import javax.persistence.*
 
 /** 쇼핑센터카테고리 */

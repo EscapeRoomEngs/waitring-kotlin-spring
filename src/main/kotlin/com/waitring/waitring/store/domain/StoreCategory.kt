@@ -1,6 +1,6 @@
 package com.waitring.waitring.store.domain
 
-import com.waitring.waitring.common.domain.Base
+import com.waitring.waitring.core.domain.Base
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue

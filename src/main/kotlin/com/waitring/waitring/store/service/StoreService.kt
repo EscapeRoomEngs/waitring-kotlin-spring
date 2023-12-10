@@ -1,7 +1,7 @@
 package com.waitring.waitring.store.service
 
-import com.waitring.waitring.common.dto.ErrorCode
-import com.waitring.waitring.common.exception.ConflictRuntimeException
+import com.waitring.waitring.core.dto.ErrorCode
+import com.waitring.waitring.core.exception.ConflictRuntimeException
 import com.waitring.waitring.store.dto.FindStoreDetailOutput
 import com.waitring.waitring.store.mapper.StoreMapper
 import com.waitring.waitring.store.repository.StoreRepository

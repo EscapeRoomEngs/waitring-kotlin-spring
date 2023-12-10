@@ -1,8 +1,8 @@
-package com.waitring.waitring.common.exception
+package com.waitring.waitring.core.exception
 
-import com.waitring.waitring.common.dto.ApiResponse.Companion.respError
-import com.waitring.waitring.common.dto.ApiResponse.Companion.respValidError
-import com.waitring.waitring.common.dto.ErrorCode
+import com.waitring.waitring.core.dto.ApiResponse.Companion.respError
+import com.waitring.waitring.core.dto.ApiResponse.Companion.respValidError
+import com.waitring.waitring.core.dto.ErrorCode
 import com.waitring.waitring.logger
 import org.springframework.http.HttpStatus
 import org.springframework.security.authentication.BadCredentialsException
