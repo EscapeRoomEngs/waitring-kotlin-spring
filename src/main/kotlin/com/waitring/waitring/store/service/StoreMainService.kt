@@ -3,6 +3,7 @@ package com.waitring.waitring.store.service
 import com.waitring.waitring.common.service.ImageService
 import com.waitring.waitring.store.dto.FindStoreCtgAllOutput
 import com.waitring.waitring.store.dto.FindStoreDetailOutput
+import com.waitring.waitring.waiting.service.WaitingService
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
@@ -11,8 +12,9 @@ import org.springframework.transaction.annotation.Transactional
 class StoreMainService(
         private val storeCategoryService: StoreCategoryService,
         private val storeService: StoreService,
-        private val imageService: ImageService
-) {
+        private val imageService: ImageService,
+        private val waitingService: WaitingService
+){
 
     /**
      * 가게카테고리 목록조회
@@ -34,6 +36,11 @@ class StoreMainService(
         // 2. 이미지링크 조회
         val imageLink = imageService.getImageLink(storeId)
         output.storeImageLink = imageLink
+
+        // 3. 대기팀 수 조회
+        val waitingTeamCnt = waitingService.getWaitingTeamCnt(storeId)
+        output.waitingTeamCnt = waitingTeamCnt
+        output.waitingTm *= waitingTeamCnt.toInt()
 
         return output
     }

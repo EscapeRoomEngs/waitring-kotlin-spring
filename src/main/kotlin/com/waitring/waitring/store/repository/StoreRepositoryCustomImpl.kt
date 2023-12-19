@@ -12,6 +12,8 @@ class StoreRepositoryCustomImpl(private val query: JPAQueryFactory) : StoreRepos
 
     /**
      * 특정 가게 조회
+     * @param storeId 가게 시퀀스번호
+     * @return 가게
      */
     override fun getStore(storeId: Long): Store? {
         return query
