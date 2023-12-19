@@ -35,6 +35,9 @@ data class FindStoreDetailOutput (
         @field:Schema(description = "웨이팅 가능 여부(true : 가능, false : 불가능)")
         var waitingFg : Boolean,
 
+        @field:Schema(description = "대기팀 수")
+        var waitingTeamCnt : Long,
+
         @field:Schema(description = "예상 대기시간")
         var waitingTm : Int,
 

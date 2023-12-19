@@ -10,6 +10,8 @@ class ImageRepositoryCustomImpl(private val query: JPAQueryFactory) : ImageRepos
 
     /**
      * 특정 이미지 조회
+     * @param 가게 시퀀스번호
+     * @return 이미지
      */
     override fun getImage(storeId: Long): Image? {
         return query
