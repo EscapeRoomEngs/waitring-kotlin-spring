@@ -10,7 +10,7 @@ import org.mapstruct.Mappings
 interface StoreMapper {
 
     @Mappings(
-            Mapping(source = "mall.mallCtg.mallCtgNm", target = "mallCtgNm"),
+            Mapping(source = "mall.mallCtg.company.companyNm", target = "companyNm"),
             Mapping(source = "mall.mallNm", target = "mallNm"),
             Mapping(source = "openTm", target = "openTm", dateFormat = "HH:mm"),
             Mapping(source = "closeTm", target = "closeTm", dateFormat = "HH:mm")

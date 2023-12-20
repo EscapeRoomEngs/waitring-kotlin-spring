@@ -1,6 +1,7 @@
 package com.waitring.waitring.store.service
 
 import com.waitring.waitring.common.service.ImageService
+import com.waitring.waitring.member.service.LikedStoreService
 import com.waitring.waitring.store.dto.FindStoreCtgAllOutput
 import com.waitring.waitring.store.dto.FindStoreDetailOutput
 import com.waitring.waitring.waiting.service.WaitingService
@@ -13,7 +14,8 @@ class StoreMainService(
         private val storeCategoryService: StoreCategoryService,
         private val storeService: StoreService,
         private val imageService: ImageService,
-        private val waitingService: WaitingService
+        private val waitingService: WaitingService,
+        private val likedStoreService: LikedStoreService
 ){
 
     /**
@@ -41,6 +43,10 @@ class StoreMainService(
         val waitingTeamCnt = waitingService.getWaitingTeamCnt(storeId)
         output.waitingTeamCnt = waitingTeamCnt
         output.waitingTm *= waitingTeamCnt.toInt()
+
+        // 4. 관심가게 수 조회
+        val likedStoreCnt = likedStoreService.getLikedStoreCnt(storeId)
+        output.likedStoreCnt = likedStoreCnt
 
         return output
     }

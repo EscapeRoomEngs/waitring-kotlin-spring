@@ -11,8 +11,8 @@ data class FindStoreDetailOutput (
         @field:Schema(description = "가게 설명")
         var storeDetail : String,
 
-        @field:Schema(description = "쇼핑센터카테고리명")
-        var mallCtgNm : String,
+        @field:Schema(description = "회사명")
+        var companyNm : String,
 
         @field:Schema(description = "쇼핑센터명")
         var mallNm : String,
@@ -40,6 +40,9 @@ data class FindStoreDetailOutput (
 
         @field:Schema(description = "예상 대기시간")
         var waitingTm : Int,
+
+        @field:Schema(description = "관심가게 수")
+        var likedStoreCnt : Long,
 
         @field:Schema(description = "가게 이미지링크")
         var storeImageLink : String?

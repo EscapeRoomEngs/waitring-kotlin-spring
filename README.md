@@ -59,8 +59,9 @@
 
 ### [ database install & setting ]
 
-1. All Platforms(zip, 9.5 MB) 다운: http://h2database.com/html/main.html
-
+1. H2 1.4.200 ver 다운: http://www.h2database.com/html/download-archive.html
+- Platform-Independent.ZIP 클릭
+- 버전 안 맞으면 오류 날 수 있음 !!!!!!
 
 2. CMD에서 h2가 위치한 경로로 이동한 후 h2 서버 실행 (환경에 따라 명령어 다름!!!)
 ```bash

@@ -4,7 +4,7 @@ import com.waitring.waitring.core.domain.Base
 import java.time.LocalDateTime
 import javax.persistence.*
 
-/** 사용자  */
+/** 사용자 */
 @Entity
 class Member(
         phoneNo : String,

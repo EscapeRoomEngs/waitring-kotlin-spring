@@ -15,6 +15,10 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/store/categories")
 class StoreCategoryController(private val storeMainService: StoreMainService) {
 
+    /**
+     * 가게카테고리 목록조회
+     * @return 가게카테고리 목록조회 응답
+     */
     @Operation(summary = "가게카테고리 목록조회")
     @GetMapping
     fun findStoreCtgAll(): ApiResponse<FindStoreCtgAllOutput> {
