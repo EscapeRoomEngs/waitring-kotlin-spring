@@ -2,6 +2,7 @@ package com.waitring.waitring.store.repository
 
 import com.querydsl.core.types.dsl.BooleanExpression
 import com.querydsl.jpa.impl.JPAQueryFactory
+import com.waitring.waitring.mall.domain.QCompany.company
 import com.waitring.waitring.mall.domain.QMall.mall
 import com.waitring.waitring.mall.domain.QMallCategory.mallCategory
 import com.waitring.waitring.store.domain.QStore.store
@@ -20,6 +21,7 @@ class StoreRepositoryCustomImpl(private val query: JPAQueryFactory) : StoreRepos
                 .selectFrom(store)
                 .join(store.mall, mall).fetchJoin()
                 .join(mall.mallCtg, mallCategory).fetchJoin()
+                .join(mallCategory.company, company).fetchJoin()
                 .join(store.storeCtg, storeCategory).fetchJoin()
                 .where(
                         eqStoreId(storeId)

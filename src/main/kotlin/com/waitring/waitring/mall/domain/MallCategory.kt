@@ -6,6 +6,7 @@ import javax.persistence.*
 /** 쇼핑센터카테고리 */
 @Entity
 class MallCategory(
+        company: Company,
         mallCtgNm : String,
         seq : Int,
         useFg : Boolean
@@ -15,6 +16,12 @@ class MallCategory(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var mallCtgId : Long? = null
+
+    /** 회사 시퀀스번호 */
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "company_id", nullable = false)
+    var company : Company = company
+        protected set
 
     /** 쇼핑센터카테고리명 */
     @Column(nullable = false, length = 80)

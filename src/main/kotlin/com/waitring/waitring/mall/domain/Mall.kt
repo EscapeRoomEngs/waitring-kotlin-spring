@@ -1,6 +1,7 @@
 package com.waitring.waitring.mall.domain
 
 import com.waitring.waitring.core.domain.Base
+import java.time.LocalTime
 import javax.persistence.*
 
 /** 쇼핑센터 */
@@ -9,12 +10,15 @@ class Mall(
         mallCtg : MallCategory,
         mallNm : String,
         mallSt : MallState,
-        region : String,
+        mallType : MallType,
         zipcode : String,
         address : String,
         detailAddress : String? = null,
         mallLat : String,
-        mallLng : String
+        mallLng : String,
+        openTm : LocalTime,
+        closeTm : LocalTime,
+        telNo : String,
 ) : Base() {
 
     /** 쇼핑센터 시퀀스번호 */
@@ -39,9 +43,10 @@ class Mall(
     var mallSt : MallState = mallSt
         protected set
 
-    /** 지역 */
+    /** 쇼핑센터타입 */
+    @Enumerated(value = EnumType.STRING)
     @Column(nullable = false, length = 40)
-    var region : String = region
+    var mallType : MallType = mallType
         protected set
 
     /** 우편번호 */
@@ -67,5 +72,20 @@ class Mall(
     /** 쇼핑센터 경도 */
     @Column(nullable = false, length = 40)
     var mallLng : String = mallLng
+        protected set
+
+    /** 오픈시간 */
+    @Column(nullable = false)
+    var openTm : LocalTime = openTm
+        protected set
+
+    /** 마감시간 */
+    @Column(nullable = false)
+    var closeTm : LocalTime = closeTm
+        protected set
+
+    /** 전화번호 */
+    @Column(nullable = false, length = 20)
+    var telNo : String = telNo
         protected set
 }

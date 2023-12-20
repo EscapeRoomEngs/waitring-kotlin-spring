@@ -1,9 +1,7 @@
 package com.waitring.waitring
 
 import com.waitring.waitring.common.domain.Image
-import com.waitring.waitring.mall.domain.Mall
-import com.waitring.waitring.mall.domain.MallCategory
-import com.waitring.waitring.mall.domain.MallState
+import com.waitring.waitring.mall.domain.*
 import com.waitring.waitring.store.domain.Store
 import com.waitring.waitring.store.domain.StoreCategory
 import com.waitring.waitring.store.domain.StoreState
@@ -33,16 +31,27 @@ class InitDB(private val initService: InitService) {
         @Transactional
         fun dbInit() {
             /**
+             * 회사 테스트 데이터
+             */
+            val company1 = Company(
+                    companyNm = "롯데백화점",
+                    companySt = CompanyState.OPERATE
+            )
+            em.persist(company1)
+
+            /**
              * 쇼핑센터카케고리 테스트 데이터
              */
             val mallCtg1 = MallCategory(
-                    mallCtgNm = "롯데백화점",
+                    company = company1,
+                    mallCtgNm = "백화점",
                     seq = 1,
                     useFg = true
             )
             em.persist(mallCtg1)
 
             val mallCtg2 = MallCategory(
+                    company = company1,
                     mallCtgNm = "아울렛",
                     seq = 2,
                     useFg = true
@@ -51,6 +60,7 @@ class InitDB(private val initService: InitService) {
 
             val mallCtg3 = MallCategory(
                     mallCtgNm = "쇼핑몰",
+                    company = company1,
                     seq = 3,
                     useFg = true
             )
@@ -63,11 +73,14 @@ class InitDB(private val initService: InitService) {
                     mallCtg = mallCtg1,
                     mallNm = "본점",
                     mallSt = MallState.OPERATE,
-                    region = "서울",
+                    mallType = MallType.SEOUL,
                     zipcode = "04533",
                     address = "서울특별시 중구 남대문로 81",
                     mallLat = "126.98173999657001",
-                    mallLng = "37.56491911400273"
+                    mallLng = "37.56491911400273",
+                    openTm = LocalTime.of(10, 30),
+                    closeTm = LocalTime.of(20, 30),
+                    telNo = "1577-0001",
             )
             em.persist(mall1)
 

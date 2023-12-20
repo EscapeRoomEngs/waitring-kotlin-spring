@@ -11,8 +11,8 @@ data class FindStoreDetailOutput (
         @field:Schema(description = "가게 설명")
         var storeDetail : String,
 
-        @field:Schema(description = "쇼핑센터카테고리명")
-        var mallCtgNm : String,
+        @field:Schema(description = "회사명")
+        var companyNm : String,
 
         @field:Schema(description = "쇼핑센터명")
         var mallNm : String,
