@@ -40,7 +40,7 @@ class InitDB(private val initService: InitService) {
             em.persist(company1)
 
             /**
-             * 쇼핑센터카케고리 테스트 데이터
+             * 쇼핑센터카테고리 테스트 데이터
              */
             val mallCtg1 = MallCategory(
                     company = company1,
