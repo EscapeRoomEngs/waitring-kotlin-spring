@@ -41,6 +41,9 @@ data class FindStoreDetailOutput (
         @field:Schema(description = "예상 대기시간")
         var waitingTm : Int,
 
+        @field:Schema(description = "관심가게 수")
+        var likedStoreCnt : Long,
+
         @field:Schema(description = "가게 이미지링크")
         var storeImageLink : String?
 )
