@@ -29,10 +29,10 @@ class MallService(private val repository: MallRepository){
         // 2. 계층구조로 매핑
         val output = mutableMapOf<String, MutableList<MallInfo>>()
         mallList.forEach {
-            if (output.containsKey(it.mallType.value)) {
-                output[it.mallType.value]?.add(mapper.toMallInfo(it))
+            if (output.containsKey(it.mallType.name)) {
+                output[it.mallType.name]?.add(mapper.toMallInfo(it))
             } else {
-                output[it.mallType.value] = mutableListOf(mapper.toMallInfo(it))
+                output[it.mallType.name] = mutableListOf(mapper.toMallInfo(it))
             }
         }
 

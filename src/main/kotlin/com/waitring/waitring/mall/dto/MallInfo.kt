@@ -36,7 +36,4 @@ data class MallInfo (
 
         @field:Schema(description = "마감시간")
         var closeTm : String,
-
-        @field:Schema(description = "전화번호")
-        var telNo : String,
 )

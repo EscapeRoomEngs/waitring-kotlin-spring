@@ -17,8 +17,7 @@ class Mall(
         mallLat : String,
         mallLng : String,
         openTm : LocalTime,
-        closeTm : LocalTime,
-        telNo : String,
+        closeTm : LocalTime
 ) : Base() {
 
     /** 쇼핑센터 시퀀스번호 */
@@ -82,10 +81,5 @@ class Mall(
     /** 마감시간 */
     @Column(nullable = false)
     var closeTm : LocalTime = closeTm
-        protected set
-
-    /** 전화번호 */
-    @Column(nullable = false, length = 20)
-    var telNo : String = telNo
         protected set
 }
